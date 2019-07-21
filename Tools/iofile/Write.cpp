@@ -15,7 +15,11 @@ void Write::setline(std::string text)
     file.open( &name[0] , std::ios::app );
     if( file.good() == true )
     {
-        text += "\n";
+        file.seekp(0,std::ios::end);
+        if(file.tellp() != 0)
+        {
+            text = "\n" + text;
+        }
         file.write(&text[0],text.length());
         file.close();
     } else std::cout << "error: i can't open file " << name << std::endl;

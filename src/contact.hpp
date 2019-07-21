@@ -16,6 +16,8 @@ public:
     Contact(std::string name, std::string number);
     std::string getName();
     std::string getNumber();
+    std::string getData();
     void showData();
+    friend class ContactEditor;
 };
 #endif // CONTACT

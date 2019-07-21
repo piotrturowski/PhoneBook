@@ -1,0 +1,1 @@
+1. Create function to delete contact from file List Contacts and contact file data

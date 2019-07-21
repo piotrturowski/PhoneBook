@@ -32,3 +32,8 @@ void Contact::showData()
 {
     std::cout << getName() << " " << getNumber() << std::endl;
 }
+
+std::string Contact::getData()
+{
+    return getName() + " " + getNumber();
+}
